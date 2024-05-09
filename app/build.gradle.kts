@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+
 android {
     namespace = "com.example.taskmanagementapp"
     compileSdk = 34
@@ -37,6 +38,7 @@ android {
 
 dependencies {
 
+    implementation ("it.xabaras.android:recyclerview-swipedecorator:1.2.4")
     implementation("androidx.core:core-ktx:1.13.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
