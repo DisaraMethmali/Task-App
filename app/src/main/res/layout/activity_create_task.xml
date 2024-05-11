@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,24 +13,33 @@
         tools:layout_editor_absoluteX="203dp"
         tools:layout_editor_absoluteY="69dp">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edittext"
-        android:paddingStart="7dp"
-        android:hint="Enter New Task"
-        android:paddingEnd="7dp"/>
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter New Task"
+            android:paddingStart="70dp"
+            android:paddingEnd="7dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_below="@id/edittext"
-        android:text="Save"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/button_save"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/edittext2"
+            android:layout_width="match_parent"
+            android:layout_height="111dp"
+            android:layout_below="@id/edittext"
+            android:hint="Enter Description"
+            android:paddingStart="70dp"
+            android:paddingEnd="7dp" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edittext2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

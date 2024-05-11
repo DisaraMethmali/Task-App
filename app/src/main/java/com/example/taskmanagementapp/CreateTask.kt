@@ -1,56 +1,27 @@
 package com.example.taskmanagementapp
-import androidx.fragment.app.FragmentManager
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import com.example.taskmanagementapp.databinding.ActivityCreateTaskBinding
 
 class CreateTask : AppCompatActivity() {
-
+    private lateinit var binding: ActivityCreateTaskBinding
+    private lateinit var db: DatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_task)
-    }
+        binding = ActivityCreateTaskBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        db = DatabaseHelper(this)
 
-    fun showFragment() {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        val fragment = supportFragmentManager.findFragmentByTag("MyFragmentTag")
-        if (fragment != null) {
-            fragmentTransaction.show(fragment)
-            fragmentTransaction.commit()
+        binding.buttonSave.setOnClickListener {
+            val title = binding.edittext.text.toString()
+            val content = binding.edittext2.text.toString()
+            val task = Task(id = 0, title = title, content = content) // Assuming id should be auto-generated
+            db.insertTask(task)
+            finish()
+            Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show()
         }
     }
-
-
-
-    fun show(supportFragmentManager: FragmentManager, fragment: String, tag: String) {
-        // Begin a transaction to add the fragment
-        val transaction = supportFragmentManager.beginTransaction()
-
-        // Check if the fragment is already added to avoid adding it multiple times
-        if (supportFragmentManager.findFragmentByTag(tag) == null) {
-            // Add the fragment using a tag for later retrieval if needed
-            transaction.add(android.R.id.content, fragment, tag)
-        }
-
-        // Show the fragment
-        transaction.show(fragment)
-
-        // Commit the transaction
-        transaction.commit()
-    }
-
-    fun show(supportFragmentManager: FragmentManager, fragment: String) {
-
-    }
-
-    companion object {
-        const val TAG = "CreateTaskDialog"
-        fun newInstance(): CreateTask {
-
-            return CreateTask()
-        }
-    }
-
-
 }
