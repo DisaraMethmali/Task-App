@@ -9,7 +9,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taskmanagementapp.Adapter.ToDoAdapter
-import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
+
+
 
 
 class RecyclerViewTouchHelper(private val adapter: ToDoAdapter, private val context: Context) : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {

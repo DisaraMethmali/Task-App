@@ -40,6 +40,10 @@ class CreateTask : AppCompatActivity() {
         transaction.commit()
     }
 
+    fun show(supportFragmentManager: FragmentManager, fragment: String) {
+
+    }
+
     companion object {
         const val TAG = "CreateTaskDialog"
         fun newInstance(): CreateTask {
