@@ -11,54 +11,91 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="0dp"
-        tools:ignore="MissingConstraints" /> <!-- Set padding to 0dp -->
+        tools:ignore="MissingConstraints" /> <!-- Set padding to 0dp --><![CDATA[
     tools:ignore="MissingConstraints">
+
+
+
+
+
+
+
+
+
+
+
+
+    ]]>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="50dp"
-        tools:ignore="MissingConstraints">
+        android:layout_marginBottom="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/titleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+
+        <FrameLayout
+            android:id="@+id/taskBox"
+            android:layout_width="327dp"
+            android:layout_height="158dp"
+            android:background="@drawable/border"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/contentTextView"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="90dp"
+                android:text="Content"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/updateButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="80dp"
+            app:srcCompat="@drawable/ic_baseline_edit"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/deleteButton"
+            android:layout_width="138dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="226dp"
+            android:layout_marginTop="80dp"
+            app:srcCompat="@drawable/ic_baseline_delete"
+            tools:ignore="MissingConstraints" />
+
+
+
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/contentTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Content"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-72dp"
-        tools:layout_editor_absoluteY="59dp" />
 
-    <ImageView
-        android:id="@+id/updateButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_edit"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="38dp"
-        tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/deleteButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_delete"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="93dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 

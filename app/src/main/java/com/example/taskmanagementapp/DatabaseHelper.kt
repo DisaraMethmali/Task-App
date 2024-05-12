@@ -74,20 +74,19 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         val db = readableDatabase
         val query = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_ID = $taskId"
         val selectionArgs = arrayOf(taskId.toString())
-        val cursor = db.rawQuery(query, selectionArgs)
+        val cursor = db.rawQuery(query, null)
+        cursor.moveToFirst()
 
-        var task: Task? = null
-        if (cursor.moveToFirst()) {
             val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
             val title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITLE))
             val content = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CONTENT))
-          task = Task(id, title, content)
-        }
+
+
 
         cursor.close()
         db.close()
 
-        return task ?: throw NoSuchElementException("Task with ID $taskId not found")
+        return Task(id,title,content)
     }
     fun deleteTask(taskId: Int) {
         val db = writableDatabase

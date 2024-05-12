@@ -8,6 +8,7 @@
     tools:context=".CreateTask">
 
     <RelativeLayout
+        android:background="@drawable/image1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="203dp"
@@ -15,31 +16,68 @@
 
         <EditText
             android:id="@+id/edittext"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
+            android:layout_marginLeft="20dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
             android:hint="Enter New Task"
             android:paddingStart="70dp"
             android:paddingEnd="7dp" />
 
         <EditText
             android:id="@+id/edittext2"
-            android:layout_width="match_parent"
-            android:layout_height="111dp"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/edittext"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="139dp"
             android:hint="Enter Description"
             android:paddingStart="70dp"
             android:paddingEnd="7dp" />
 
-        <Button
+        <ImageView
             android:id="@+id/buttonSave"
-            android:layout_width="164dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/edittext2"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="5dp"
-            android:text="Save"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
+            android:layout_marginTop="-367dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_done_all_24" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Add Task"
+            android:textColor="@color/purple"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Task"
+            android:textSize="24sp"
+            android:layout_marginLeft="50dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="140dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="320dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Enter Description"
+            android:textSize="24sp" />
+
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

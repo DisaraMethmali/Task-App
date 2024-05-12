@@ -4,25 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
 
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="To Do Tasks"
-        android:textSize="32sp"
-        android:textColor="#000"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+    tools:context=".MainActivity2">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
         android:clipToPadding="false"
+        android:padding="16dp"
+        android:background="@drawable/image1"
         android:scrollbars="vertical" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -31,9 +22,62 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="30dp"
-        android:backgroundTint="@color/black"
-        android:src="@drawable/ic_baseline"
-        android:contentDescription="TODO" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/purple"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_baseline" />
+
+
+    <TextView
+        android:id="@+id/textViewHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#800080"
+    android:layout_marginTop="36dp"
+    android:layout_marginStart="28dp" /> <!-- Margin top and left -->
+
+    <TextView
+        android:id="@+id/textViewDisara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disara!"
+        android:textSize="29dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="#000"
+    android:layout_marginTop="76dp"
+    android:layout_marginStart="18dp" /> <!-- Margin top and left -->
+
+    <TextView
+        android:id="@+id/textViewTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tasks"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="#000"
+    android:layout_marginTop="116dp"
+    android:layout_marginStart="130dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pn" />
 
 </RelativeLayout>
