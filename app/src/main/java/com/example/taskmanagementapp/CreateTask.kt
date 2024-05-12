@@ -18,10 +18,12 @@ class CreateTask : AppCompatActivity() {
         binding.buttonSave.setOnClickListener {
             val title = binding.edittext.text.toString()
             val content = binding.edittext2.text.toString()
-            val task = Task(id = 0, title = title, content = content) // Assuming id should be auto-generated
+            val task = Task(id = 0, title = title, content = content)
+// Omitting id or passing null
             db.insertTask(task)
             finish()
             Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show()
         }
+
     }
 }
